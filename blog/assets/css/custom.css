@@ -1,0 +1,122 @@
+/* Back to Top Button Styles */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* 乳白色 + 透明度 */
+    color: black;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* 正圓形按鈕 */
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 1000; /* 確保它顯示在最上層 */
+    overflow: hidden;
+    padding: 0;
+    line-height: 50px;
+}
+
+#backToTop::before {
+    content: '\2191'; /* Unicode for upwards arrow */
+    font-size: 24px;
+    color: black; /* 設定箭頭顏色為黑色 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body.dark-mode {
+    background: #222;
+    color: white;
+}
+body.dark-mode a {
+    color: #ff6b6b;
+}
+body.dark-mode .post {
+    background: #333;
+}
+
+/* 讓切換模式按鈕與選單對齊 */
+.mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; /* 與選單之間的間距 */
+}
+
+/* 按鈕樣式 - 長方形 */
+.mode-toggle button {
+    background: rgba(255, 255, 255, 0.8); /* 乳白色 + 透明度 */
+    border: none;
+    width: auto; /* 自適應內容長度 */
+    height: 36px; /* 適中高度 */
+    padding: 8px 16px; /* 內邊距，讓內容不會太擠 */
+    border-radius: 6px; /* 讓邊角稍微圓潤 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 添加陰影，讓按鈕更明顯 */
+}
+
+/* 移除左側的邊界線 */
+.mode-toggle::before {
+    content: none;
+}
+
+/* 滑鼠懸停時的效果 */
+.mode-toggle button:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 深色模式下的按鈕背景 */
+.dark-mode .mode-toggle button {
+    background: rgba(50, 50, 50, 0.8);
+    color: white;
+}
+
+/* 預設顯示深色模式按鈕 */
+#darkModeToggle {
+    display: flex;
+}
+
+/* 進入深色模式後，隱藏深色模式按鈕，顯示淺色模式按鈕 */
+.dark-mode #darkModeToggle {
+    display: none;
+}
+
+.dark-mode #lightModeToggle {
+    display: flex;
+}
+
+.featured-post {
+    text-align: center;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.featured-post img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.recent-updates {
+    background: #fffae3;
+    padding: 15px;
+    border-left: 5px solid #ff6b6b;
+    margin-bottom: 20px;
+}
