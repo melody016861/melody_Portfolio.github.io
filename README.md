@@ -123,17 +123,7 @@ Developer → GitHub → GitHub Actions (CI/CD) → Docker Image → Kind Cluste
 - **Version Control:** Git + GitHub  
 
 ### 📂 專案結構
-flask-k8s-cicd/
-├── app.py
-├── Dockerfile
-├── requirements.txt
-├── k8s/
-│ ├── deployment.yaml
-│ └── service.yaml
-├── .github/
-│ └── workflows/
-│ └── deploy.yml
-└── README.md
+<pre><code>```text flask-k8s-cicd/ ├── app.py ├── Dockerfile ├── requirements.txt ├── k8s/ │ ├── deployment.yaml │ └── service.yaml ├── .github/ │ └── workflows/ │ └── deploy.yml └── README.md ```</code></pre>
 
 ### 🔁 Pipeline 流程
 1. 提交程式碼至 GitHub `main` 分支  
@@ -169,6 +159,7 @@ jobs:
           kind create cluster --name flask-k8s
           kind load docker-image flask-app
           kubectl apply -f k8s/
+```
 
 ### 📸 成果展示（建議補上截圖）
 | 步驟 | 說明 | 範例 |
