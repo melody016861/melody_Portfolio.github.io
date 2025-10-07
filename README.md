@@ -75,7 +75,19 @@ Developer → GitHub → GitHub Actions (CI/CD) → Docker Image → Kind Cluste
 - **Version Control:** Git + GitHub  
 
 ### 📂 專案結構
-<pre><code>```text flask-k8s-cicd/ ├── app.py ├── Dockerfile ├── requirements.txt ├── k8s/ │ ├── deployment.yaml │ └── service.yaml ├── .github/ │ └── workflows/ │ └── deploy.yml └── README.md ```</code></pre>
+```text 
+  flask-k8s-cicd/
+├── app.py
+├── Dockerfile
+├── requirements.txt
+├── k8s/
+│ ├── deployment.yaml
+│ └── service.yaml
+├── .github/
+│ └── workflows/
+│ └── deploy.yml
+└── README.md
+```
 
 ### 🔁 Pipeline 流程
 1. 提交程式碼至 GitHub `main` 分支  
